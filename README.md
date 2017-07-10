@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README has been modified by Ulf Schuster for CF exercise 3.7: Git, GitHub & Version Control
 
 Things you may want to cover:
 
