@@ -1,3 +1,87 @@
 // Place all the styles related to the static_pages controller here.
+
+h1,
+h2,
+h3 {
+	text-align: left;
+	color: black;
+}
+
+p {
+	color: black;
+}
+
+
+//NAVBAR
+body {
+	margin-top: 50px;
+}
+
+.projectName a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase
+}
+
+.navbar a:hover {
+	color: #86FF2F;
+	text-decoration: none;
+	transition: color 2.5s;
+}
+
+//FOOTER
+
+#container-footer {
+	display:inline-block;
+	min-height: 40px;
+	width: 100%;
+	padding: 5px 50px 5px 50px;
+	background-color: #f5f5f5;
+}
+
+#container-footer a {
+	display: inline-block;
+	float: left;
+}
+
+#container-footer div {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+#container-footer p {
+	display: inline-block;
+	float: right;
+	color: black;
+}
+
+.twitter-follow-button {
+	display: inline-block;
+	padding-top: 0;
+	min-height: 30px;
+}
+
+.fb-like {
+	display: inline-block;
+	padding: 0 10px 0 10px;
+}
+
+.site-footer a:active {
+  color: #ff0000;
+}
+//END FOOTER
+
+//Typography
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+p {
+	font-family: Arial, Helvetica, Futura, sans-serif;
+}
+
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/

@@ -2,23 +2,61 @@
 <html>
   <head>
     <title>RailsApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-  <body>
-  	<nav>
-  		<ul>
-  			<li>Home</li>
-  			<li>About</li>
-  			<li>Contact</li>
-  		</ul>
-  	</nav>
+  <body data-spy="scroll" data-target=".navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid" id="container-nav">
+      	<nav class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar.collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <nav class="projectName navbar-brand">
+            <a href="#">THE MOTORCYCLE SHOP</a>
+          </nav><!--END PROJECT NAME-->
+        </nav><!--END NAVBAR HEADER-->
+        <nav class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right" id="nav">
+            <li><a href="#Home"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Work<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#container-work">Work 1</a></li>
+                  <li><a href="#container-youtube">Work 2</a></li>
+                </ul>
+              </li>
+            <li><a href="#container-faq">FAQ</a></li>
+            <li><a href="#container-contact">Contact</a></li>
+          </ul><!-- end nav-list -->
+        </nav><!-- END navbar-collapse -->
+      </div><!--end nav container -->
+    </nav><!--end navbar -->
+    
+
+
     <%= yield %>
-    <footer>
-    	&copy; 2017 Landscapes
-    </footer>
+
+      <footer class ="site-footer">
+        <div class="container" id="container-footer">
+               <!-- TWITTER -->
+        <a href="https://twitter.com/ulfschuster" class="twitter-follow-button" id="foot" data-show-screen-name="false" data-show-count="false">Follow @ulfschuster</a>
+
+                <!-- FACEBOOK -->
+        <div class="fb-like" id="foot" data-href="https://schuster-ulf-36311.bitballoon.com" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+        </div>
+        <p>&copy MOTORCYCLES, INC. 2017</p>
+        </div><!-- END container footer -->
+      </footer>
   </body>
 </html>
