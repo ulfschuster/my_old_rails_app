@@ -7,6 +7,10 @@ h3 {
 	color: black;
 }
 
+h1 {
+	padding: 10px 0 5px 0;
+}
+
 p {
 	color: black;
 }
@@ -33,9 +37,9 @@ body {
 
 #container-footer {
 	display:inline-block;
-	min-height: 40px;
+	min-height: 30px;
 	width: 100%;
-	padding: 5px 50px 5px 50px;
+	padding: 5px 20px 5px 20px;
 	background-color: #f5f5f5;
 }
 
@@ -58,18 +62,19 @@ body {
 
 .twitter-follow-button {
 	display: inline-block;
-	padding-top: 0;
+	padding: 0 5px 0 0;
 	min-height: 30px;
 }
 
 .fb-like {
 	display: inline-block;
-	padding: 0 10px 0 10px;
+	padding: 0 10px 0 0;
 }
 
 .site-footer a:active {
   color: #ff0000;
 }
+
 //END FOOTER
 
 //Typography

@@ -1,3 +1,30 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
+
+table {
+	width: 100%;
+}
+
+//Typography
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+p {
+	font-family: Georgia, Rockwell, Book Antiqua, Cambria, Palatino, Times New Roman, serif;
+	letter-spacing: 0.06em;
+}
+
+th {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+td {
+	font-family: Georgia, Rockwell, Book Antiqua, Cambria, Palatino, Times New Roman, serif;
+	letter-spacing: 0.06em;
+}
+
+
 // You can use Sass (SCSS) here: http://sass-lang.com/
