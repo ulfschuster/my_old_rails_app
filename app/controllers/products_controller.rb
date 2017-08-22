@@ -28,8 +28,13 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to products_url, notice: 'Product was successfully created.' } #Cf. redirect entry in destroy method    
+        #format.html { redirect_to @product, notice: 'Product was successfully created.' } #This is the original entry which redirects to product details without image
+        #format.html { redirect_back, notice: 'Product was successfully created.' } #Causes 500 internal server error.
+        #format.html { redirect_to "/products/index.html.erb", notice: 'Product was successfully created.' } Tried to redirect to product page but failed.
+        
         format.json { render :show, status: :created, location: @product }
+
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }

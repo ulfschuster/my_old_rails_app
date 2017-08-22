@@ -1,15 +1,16 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 
-table {
-	width: 100%;
+
+.col-products {
+	float: left;
+	display: inline;
 }
 
 .img-responsive {
-	display: block;
+	float: left;
 	margin: auto;
 	max-width: 260px;
-	position: relative;
 	border: 1px solid blue;
 }
 
@@ -23,15 +24,6 @@ h3 {
 }
 
 p {
-	font-family: Georgia, Rockwell, Book Antiqua, Cambria, Palatino, Times New Roman, serif;
-	letter-spacing: 0.06em;
-}
-
-th {
-	font-family: Futura, Helvetica, Arial, sans-serif;
-}
-
-td {
 	font-family: Georgia, Rockwell, Book Antiqua, Cambria, Palatino, Times New Roman, serif;
 	letter-spacing: 0.06em;
 }
