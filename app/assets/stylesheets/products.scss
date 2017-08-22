@@ -3,17 +3,16 @@
 
 
 .col-products {
-	float: left;
-	display: inline;
-}
-
-.img-responsive {
-	float: left;
-	margin: auto;
-	max-width: 260px;
+	padding: 15px 0 20px 30px;
+	margin: 5px -2px 5px -2px;
 	border: 1px solid blue;
 }
 
+.img-responsive {
+	margin-left: -15px;
+	padding-top: 10px;
+	border: 1px solid black;
+}
 
 
 //Typography

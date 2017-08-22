@@ -2,6 +2,13 @@
 
 <h1>Products</h1>
 
-<%= render @products %>
-
-<%= link_to 'New Product', new_product_path %>
+<div class="container-fluid">
+  <div class="row">
+	<div class="col-lg-12">
+		<%= render @products %>
+	</div>
+  </div>
+</div>
+<hr>
+<%= link_to 'Add New Product', new_product_path %>
+<hr>

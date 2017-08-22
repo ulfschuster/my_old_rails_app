@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<div class="container-fluid">
+<picture><%= image_tag(@product.image_url, class: "img-responsive") %></picture>
+</div>
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
