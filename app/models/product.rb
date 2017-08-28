@@ -1,9 +1,5 @@
 class Product < ApplicationRecord
+	def self.search(search_term)
+		Product.where("name LIKE ?", "%#{search_term}%")
+	end
 end
-#Product.all =[
-		#{
-			#name: "Motorbike 1",
-			#description: "Great motorbike",
-			#image_url: "motorbike1.jpg"
-		#}
-	#]
