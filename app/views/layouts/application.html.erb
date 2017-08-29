@@ -50,17 +50,13 @@
             <li>
               <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
+                  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                    <%= form.label :q, 'Search for:', class: 'sr-only' %>
+                    <%= form.text_field :q, id: 'q', value: params[:q], placeholder: 'search', class: 'form-control' %>
+                    <%= form.submit 'Search', class: 'btn' %>
+                  <% end %>
                 </div>
-                <button type="submit" class=btn btn-default">Submit</button>
               </form>
-                <div class="search-form">
-                  <%= form_with(url: products_path, method: 'get') do |form| %>
-                  <%= form.label :q, 'Search for:' %>
-                  <%= form.text_field :q, id: 'q', value: params[:q] %>
-                  <%= form.submit 'Search' %>
-                <% end %>
-              </div>
             </li>
           </ul><!-- end nav-list -->
         </nav><!-- END navbar-collapse -->
