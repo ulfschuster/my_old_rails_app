@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   
   root 'static_pages#landing_page' #This root will be ignored because the root to 'static_pages#index is first in line. // Sets the root of the rails app to the controller static_pages and the landing page. The controller for the static page needs to be referenced in the routes.rb file like this. Otherwise, the user cannot access the page.
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  post 'static_pages/thank_you'
+  
 end
