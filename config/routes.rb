@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  resources :users
 	resources :users, only: [:products, :index, :show, :create, :destroy]
 	#resources :orders, only: [:index, :show, :create, :destroy]
 
@@ -11,6 +13,10 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   get 'static_pages/landing_page'
+
+  get 'orders/index'
+
+  get 'orders/show'
 
   #get '/products', to: 'products#index' #Example: Get request for non-static page (cf. ex. 5.1)
 
