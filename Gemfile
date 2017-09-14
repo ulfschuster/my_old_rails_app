@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails' /Just added to commit master 5.4
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # 3.9: Installing jQuery: No info in the exercise where jquery rails should be placed
 gem 'jquery-rails'
