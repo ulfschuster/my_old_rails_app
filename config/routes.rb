@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
   resources :users
 	resources :users, only: [:products, :index, :show, :create, :destroy]
+  resources :posts #Added in 5.5
+  root 'posts#index' # Added in 5.5
 	#resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :products
@@ -17,6 +19,16 @@ Rails.application.routes.draw do
   get 'orders/index'
 
   get 'orders/show'
+
+  get 'users/form'
+
+  get 'users/show'
+
+  get 'users/index'
+
+  get 'users/edit'
+
+  get 'users/new'
 
   #get '/products', to: 'products#index' #Example: Get request for non-static page (cf. ex. 5.1)
 

@@ -51,7 +51,7 @@
 							<div class="form-group navbar-form navbar-right" role="search">
 								<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
 									<%= form.label :q, 'Search for:', class: 'sr-only' %>
-									<%= form.text_field :q, id: 'q', value: params[:q], placeholder: 'search', class: 'form-control' %>
+									<%= form.text_field :q, id: 'q', value: params[:q], placeholder: 'search for products', class: 'form-control' %>
 									<%= form.submit 'Search', class: 'btn' %>
 								<% end %>
 							</div><!-- END form-group -->

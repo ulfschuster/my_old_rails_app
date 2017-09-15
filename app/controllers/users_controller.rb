@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  load_and_authorize_resource
   # GET /users
   # GET /users.json
   def index
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.all # added in exercise 5.5
   end
 
   # GET /users/new
@@ -19,6 +21,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.all #added in exercise 5.5
   end
 
   # POST /users
