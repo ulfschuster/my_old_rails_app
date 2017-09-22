@@ -27,7 +27,9 @@
   <%= @product.price %>
 </p>
 
-<%= @product.highest_rating_comment %>
-
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+<hr>
+<%= @product.highest_rating_comment %>
+<hr>
