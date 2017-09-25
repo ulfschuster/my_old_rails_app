@@ -7,7 +7,9 @@ Rails.application.routes.draw do
  
 	#resources :orders, only: [:index, :show, :create, :destroy]
 
-  resources :products
+  resources :products do
+    resources :comments
+  end
 
   get 'static_pages/about'
 
