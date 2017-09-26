@@ -29,8 +29,6 @@
 
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
-<% if signed_in? %>
-	<h4>Add a review</h4>
 	<%= form_for([@product, @product.comments.build]) do |f| %>
 	<p>
 		<%= f.label :body, "Comments" %><br>
@@ -44,7 +42,6 @@
 	<p>
 		<%= f.submit "Submit" %>
 	</p>
-	<% end %>
 	<% end %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
