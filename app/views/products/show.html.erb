@@ -23,7 +23,7 @@
 </p>
 
 <p>
-	<strong>Price:</strong>
+	<strong>Price: €</strong>
 	<%= @product.price %>
 </p><br>
 
@@ -36,7 +36,6 @@
 <%= link_to 'Back', products_path %>
 
 <hr>
-<%= @product.highest_rating_comment %><!-- ADDED IN 5.7 - not working properly -->
 <%= render 'new_comment' %>
 <%= render 'comments' %>
 <hr>

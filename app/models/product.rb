@@ -3,7 +3,8 @@ class Product < ApplicationRecord
 	has_many :orders #Added in 5.7 according to my sketch from 5.6
 	validates :name, presence: true
 	validates :description, presence: true
-	validates :image_url, presence:true
+	#validates :image_url, presence: true
+	validates :image_url, allow_blank: true, format: { with: %r{.(gif|jpg|png)\Z}i, message: 'must be a URL for GIF, JPG or PNG image.' }
 	validates :colour, presence: true
 	validates :price, presence: true
 	def self.search(search_term)
