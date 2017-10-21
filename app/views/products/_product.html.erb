@@ -1,9 +1,11 @@
 <div class="col-products col-xs-12 col-sm-6 col-md-4 col-lg-3">
-  <picture><%= image_tag(product.image_url, class: "img-responsive") %></picture>
+	<% if(Rails.application.assets.find_asset(product.image_url) != nil) %>
+  	<picture><%= image_tag(product.image_url, class: "img-responsive") %></picture>
+  <% end %>
   <p><%= product.name %></p>
   <p><%= product.description %></p>
   <p>Colour: <%= product.colour %></p>
-  <p>Price: € <%= product.price %></p>
+  <p>Price: €<%= product.price %></p>
   <%= link_to 'Show', product %>
   <%= link_to 'Edit', edit_product_path(product) %>
   <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
