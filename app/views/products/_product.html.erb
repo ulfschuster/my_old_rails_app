@@ -1,7 +1,7 @@
 <div class="col-products col-xs-12 col-sm-6 col-md-4 col-lg-3">
-	<% if(Rails.application.assets.find_asset(product.image_url) != nil) %>
+	<%# if(Rails.application.assets.find_asset(product.image_url) != nil) %>
   	<picture><%= image_tag(product.image_url, class: "img-responsive") %></picture>
-  <% end %>
+  <%# end %>
   <p><%= product.name %></p>
   <p><%= product.description %></p>
   <p>Colour: <%= product.colour %></p>
