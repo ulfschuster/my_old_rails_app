@@ -32,6 +32,13 @@
 	<div class="rated" data-score="<%= @product.average_rating %>"></div>
 </p><br>
 
+<div>
+	<%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: 'shared/stripe_checkout_button' %>
+     <% end %>   
+</div>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
