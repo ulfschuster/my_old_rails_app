@@ -1,5 +1,5 @@
 class UserMailerTest < UserMailerPreview
-	default from: "from@example.com"
+	default from: "ulf.schuster@gmail.com"
 
 	def contact_form(email, name, message)
 	@message = message
