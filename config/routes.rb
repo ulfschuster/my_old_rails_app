@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => {:registrations => "registrations"}
   #devise_for :users,  :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => {:registrations => "user_registrations"}
   resources :users
 	resources :users, only: [:products, :index, :show, :create, :destroy]
   resources :posts #Added in 5.5
- 
-	#resources :orders, only: [:index, :show, :create, :destroy]
+  resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :products do
     resources :comments
@@ -32,6 +31,9 @@ Rails.application.routes.draw do
   get 'users/edit'
 
   get 'users/new'
+
+  post 'payments/create'
+  get 'payments/create'
 
   #get '/products', to: 'products#index' #Example: Get request for non-static page (cf. ex. 5.1)
 

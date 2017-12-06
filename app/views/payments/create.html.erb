@@ -1,0 +1,8 @@
+<div class="container payment-message">
+  <div class="row">
+    <div class="col-md-6 col-md-push-2 col-xs-12">
+    <p>Thank you for your purchase of <%= @product.name %> for € <%=@product.price %> with Motorcycle Shop!</p></p>
+    <p class="payment-text"> Be sure to leave us a <%=link_to 'comment', product_path(@product)%>. </p>
+    <p class="payment-text"> Browse through our other <%= link_to 'bikes!', products_path %> </p>
+  </div><!-- / panel-body -->
+</div><!-- / panel -->
