@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <p id="notice"><%= notice %></p>
-<picture><%= image_tag(@product.image_url, class: "img-responsive") %></picture><br>
+<picture><%= image_tag(@product.image_url,  width: "450", class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %></picture><br>
 </div><!-- end container-fluid -->
 <p>
 	<strong>Name:</strong>
