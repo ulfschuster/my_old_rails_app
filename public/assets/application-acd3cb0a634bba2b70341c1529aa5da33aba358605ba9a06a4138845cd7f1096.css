@@ -1,0 +1,287 @@
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 5, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/products.scss */
+.col-products {
+  padding: 15px 0 20px 30px;
+  margin: 5px -2px 5px -2px;
+  border: 1px solid blue;
+}
+
+/* line 11, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/products.scss */
+.img-responsive {
+  margin-left: -15px;
+  border: 1px solid black;
+}
+
+/* line 16, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/products.scss */
+.product-reviews {
+  display: inline-block;
+}
+
+/* line 22, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/products.scss */
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+/* line 28, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/products.scss */
+p {
+  font-family: Georgia, Rockwell, Book Antiqua, Cambria, Palatino, Times New Roman, serif;
+  letter-spacing: 0.06em;
+}
+/* line 1, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 3, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3 {
+  text-align: left;
+  color: black;
+}
+
+/* line 10, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+h1 {
+  padding: 10px 0 5px 0;
+}
+
+/* line 14, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+p {
+  color: black;
+}
+
+/* line 20, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+body {
+  margin-top: 50px;
+}
+
+/* line 24, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+.projectName a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 30, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+.navbar a:hover {
+  color: #86FF2F;
+  text-decoration: none;
+  transition: color 2.5s;
+}
+
+/* line 36, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+.search-form {
+  margin-top: -10px;
+  padding-right: 10px;
+}
+
+/* line 43, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+#container-footer {
+  display: inline-block;
+  min-height: 30px;
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+  background-color: #f5f5f5;
+}
+
+/* line 51, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+#container-footer a {
+  display: inline-block;
+  float: left;
+}
+
+/* line 56, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+#container-footer div {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 62, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+#container-footer p {
+  display: inline-block;
+  float: right;
+  color: black;
+}
+
+/* line 68, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+.twitter-follow-button {
+  display: inline-block;
+  padding: 0 5px 0 0;
+  min-height: 30px;
+}
+
+/* line 74, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+.fb-like {
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+
+/* line 79, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+.site-footer a:active {
+  color: #ff0000;
+}
+
+/* line 86, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+/* line 92, /Users/janoutreffers/Desktop/rails_app/app/assets/stylesheets/static_pages.scss */
+p {
+  font-family: Arial, Helvetica, Futura, sans-serif;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ 
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

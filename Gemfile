@@ -53,6 +53,7 @@ group :development, :test do
   gem 'sqlite3'
   # RSpec
   gem 'rspec-rails', '~> 3.7.1'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
@@ -68,3 +69,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'stripe'
+gem 'brakeman', :require => false

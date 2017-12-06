@@ -8,10 +8,12 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      logger.debug "Product: #{@products}"
     else
       @products = Product.all
     end
     @products = Product.order("name").page(params[:page]).per_page(5)
+    logger.debug "Product: #{@products}"
   end
 
   # GET /products/1
@@ -19,6 +21,7 @@ class ProductsController < ApplicationController
   def show
    # @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.order("id").page(params[:page]).per_page(5)
+    logger.debug "Comments: #{@comments}"
   end
 
   # GET /products/new

@@ -1,0 +1,22 @@
+// Place all the styles related to the payments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Payments //
+.payment-message {
+  margin: 0 auto;
+  background: image-url('motorcycle1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
+  clear: both;
+  padding-top:
+  300px;
+}
+
+.payment-message p {color: white;}
+.payment-text a { color:rgb(252, 250, 196);}
+
+.payment-text a:hover {color: green;}
