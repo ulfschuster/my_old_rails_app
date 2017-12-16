@@ -1,0 +1,47 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 form-group">
+        <div class="field">
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :product_name, class: 'form-control' %>
+        </div><br>
+
+        <div class="field">
+          <%= form.label :description %>
+          <%= form.text_area :description, id: :product_description, class: 'form-control' %>
+        </div><br>
+
+        <div class="field">
+          <%= form.label :image_url %>
+          <%= form.text_field :image_url, id: :product_image_url, class: 'form-control' %>
+        </div><br>
+
+        <div class="field">
+          <%= form.label :colour %>
+          <%= form.text_field :colour, id: :product_colour, class: 'form-control' %>
+        </div><br>
+
+         <div class="field">
+          <%= form.label :price %>
+          <%= form.text_field :price, id: :product_price, class: 'form-control' %>
+        </div><br>
+
+        <div class="actions">
+          <%= form.submit class: 'btn' %>
+        </div>
+      </div><!-- END column -->
+    </div><!-- END row -->
+  </div><!-- END container -->
+<% end %>

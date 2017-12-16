@@ -1,0 +1,34 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+
+
+.col-products {
+	padding: 15px 0 20px 30px;
+	margin: 5px -2px 5px -2px;
+	border: 1px solid blue;
+}
+
+.img-responsive {
+	margin-left: -15px;
+	border: 1px solid black;
+}
+
+.product-reviews {
+	display: inline-block;
+}
+
+
+//Typography
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+p {
+	font-family: Georgia, Rockwell, Book Antiqua, Cambria, Palatino, Times New Roman, serif;
+	letter-spacing: 0.06em;
+}
+
+
+// You can use Sass (SCSS) here: http://sass-lang.com/

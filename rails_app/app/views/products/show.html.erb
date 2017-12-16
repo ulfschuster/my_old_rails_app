@@ -1,0 +1,53 @@
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+<picture><%= image_tag(@product.image_url,  width: "450", class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %></picture><br>
+</div><!-- end container-fluid -->
+<p>
+	<strong>Name:</strong>
+	<%= @product.name %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @product.description %>
+</p>
+
+<p>
+	<strong>Image url:</strong>
+	<%= @product.image_url %>
+</p>
+
+<p>
+	<strong>Colour:</strong>
+	<%= @product.colour %>
+</p>
+
+<p>
+	<strong>Price: €</strong>
+	<%= @product.price %>
+</p><br>
+
+<p>
+	<strong>Average Rating:</strong>
+	<div class="rated" data-score="<%= @product.average_rating %>"></div>
+</p><br>
+
+<div>
+	<%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: 'shared/stripe_checkout_button' %>
+     <% end %>   
+</div>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+<div class= "comments">
+    <h2>Comments</h2>
+    <p><%= @product.highest_rating_comment.try(:rating) %><p>
+        <%= render 'new_comment' %>
+        <%= render 'comments' %>
+</div>
+<div class="text-center col-xs-12">
+    <%= will_paginate @comments %>
+</div>      

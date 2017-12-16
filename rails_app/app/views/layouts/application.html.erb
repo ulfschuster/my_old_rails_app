@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RailsApp</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<![endif]-->
+		 <!-- FACEBOOK -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.9";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+			 <!-- TWITTER -->
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</head>
+
+	<body data-spy="scroll" data-target=".navbar">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid" id="container-nav">
+				<nav class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar.collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<nav class="projectName navbar-brand">
+						<a href="/static_pages/landing_page">THE MOTORCYCLE SHOP</a>
+					</nav><!--END PROJECT NAME-->
+				</nav><!--END NAVBAR HEADER-->
+				<nav class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right" id="nav">
+						<li><a href="/static_pages/index"><span class="glyphicon glyphicon-home"></span></a></li>
+						<li><a href="/static_pages/about">About</a></li>
+						<li><a href="/products/">Motorbikes</a></li>
+						<li><a href="/static_pages/contact">Contact</a></li>
+						<li>
+							<div class="form-group navbar-form navbar-right" role="search">
+								<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+									<%= form.label :q, 'Search for:', class: 'sr-only' %>
+									<%= form.text_field :q, id: 'q', value: params[:q], placeholder: 'search for products', class: 'form-control' %>
+									<%= form.submit 'Search', class: 'btn' %>
+								<% end %>
+							</div><!-- END form-group -->
+						</li>
+						<li>
+							<% if user_signed_in? %>
+								<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+							<% else %>
+								<%= link_to('Login', new_user_session_path) %>
+							<% end %>
+						</li>
+					</ul><!-- end nav-list -->
+				</nav><!-- END navbar-collapse -->
+			</div><!--end nav container -->
+		</nav><!--end navbar -->
+		<%if notice %>
+		<p id="notice" class="alert alert-info"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+		<p id="alert" class="alert alert-info"><%= alert %></p>
+		<% end %>
+
+
+		<%= yield %>
+
+			<footer class ="site-footer">
+				<div class="container" id="container-footer">
+							 <!-- TWITTER -->
+				<a href="https://twitter.com/ulfschuster" class="twitter-follow-button" id="foot" data-show-screen-name="false" data-show-count="false">Follow @ulfschuster</a>
+
+								<!-- FACEBOOK -->
+				<div class="fb-like" id="foot" data-href="https://schuster-ulf-36311.bitballoon.com" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+				</div>
+				<p>&copy MOTORCYCLES, INC. 2017</p>
+				</div><!-- END container footer -->
+			</footer>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<% if signed_in? %>
+  <h3>Add a review:</h3><br>
+  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
+    <p>
+      <%= f.label :body, "Enter your comment" %>
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-6">
+          <%= f.text_area :body, class: 'form-control', rows: "10" %>
+        </div>
+      </div>
+    </p><br>
+    <p>
+      <%= f.label :rating, "Rate this product" %>
+      <div class="rating"></div><br>
+    </p>
+
+    <p>
+      <%= f.submit "Submit", class: 'btn' %>
+    </p>
+  <% end %>
+<% end %>

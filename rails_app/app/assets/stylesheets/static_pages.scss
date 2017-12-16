@@ -1,0 +1,173 @@
+// Place all the styles related to the static_pages controller here.
+
+h1,
+h2,
+h3 {
+	text-align: left;
+	color: black;
+}
+
+h1 {
+	padding: 10px 0 5px 0;
+}
+
+p {
+	color: black;
+}
+
+
+//NAVBAR
+body {
+	margin-top: 50px;
+}
+
+.projectName a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase
+}
+
+.navbar a:hover {
+	color: #86FF2F;
+	text-decoration: none;
+	transition: color 2.5s;
+}
+
+.search-form {
+margin-top: -10px;
+padding-right: 10px;
+}
+
+//FOOTER
+
+#container-footer {
+	display:inline-block;
+	min-height: 30px;
+	width: 100%;
+	padding: 5px 20px 5px 20px;
+	background-color: #f5f5f5;
+}
+
+#container-footer a {
+	display: inline-block;
+	float: left;
+}
+
+#container-footer div {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+#container-footer p {
+	display: inline-block;
+	float: right;
+	color: black;
+}
+
+.twitter-follow-button {
+	display: inline-block;
+	padding: 0 5px 0 0;
+	min-height: 30px;
+}
+
+.fb-like {
+	display: inline-block;
+	padding: 0 10px 0 0;
+}
+
+.site-footer a:active {
+  color: #ff0000;
+}
+
+// Pagination //
+.pagination {
+  background: white;
+  cursor: default;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    font-size: 13px;}
+}
+
+@media (max-width: 320px) {
+  .pagination {
+    font-size: 10px;}
+}
+
+.pagination a {
+  color: black;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a, 
+.pagination span, 
+.pagination em {
+  padding: 0.2em 0.7em;
+  display: block;
+  float: left;
+  margin-right: 1px; 
+}
+
+.pagination .disabled {
+  color: #c5c598;
+  border: 1px solid #c5c598; 
+}
+
+.current {
+  background-color: #c5c598;
+  color: white;
+  padding: 8px 16px;
+}
+
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #3de07d;
+  color: white;
+  border: 1px solid #c5c598; 
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #c5c598;
+  border: 1px solid #c5c598; 
+}
+
+.pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  margin-bottom: 0.3em;
+  text-align: center; 
+}
+
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; 
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+//END FOOTER
+
+//Typography
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+p {
+	font-family: Arial, Helvetica, Futura, sans-serif;
+}
+
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
