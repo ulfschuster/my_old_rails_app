@@ -5,7 +5,11 @@
 <div class="container-fluid">
   <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<%= render @products %>
+		<% cache (cache_key_for_products) do %> 
+		    <% @products.each do |product| %>
+		      	<%= render partial: "product", locals: {product: product} %>
+		    <% end %>
+		 <% end %>
 	</div>
   </div>
 </div>

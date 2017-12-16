@@ -1,13 +1,15 @@
-<div class="col-products col-xs-12 col-sm-6 col-md-4 col-lg-3">
-	<%# if( Rails.env.production(Rails.application.assets_manifest.find_sources(product.image_url) != nil %>
-	<%# if(Rails.application.assets.find_asset(product.image_url) != nil) %>
-  <picture><%= image_tag(product.image_url, width: "450", height: "400", class: "img-responsive") %></picture>
-  <%# end %>
-  <p><%= product.name %></p>
-  <p><%= product.description %></p>
-  <p>Colour: <%= product.colour %></p>
-  <p>Price: €<%= product.price %></p>
-  <%= link_to 'Show', product %>
-  <%= link_to 'Edit', edit_product_path(product) %>
-  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+<% cache product do %>
+  <div class="col-products col-xs-12 col-sm-6 col-md-4 col-lg-3">
+    <%# if( Rails.env.production(Rails.application.assets_manifest.find_sources(product.image_url) != nil %>
+    <%# if(Rails.application.assets.find_asset(product.image_url) != nil) %>
+    <picture><%= image_tag(product.image_url, width: "450", height: "400", class: "img-responsive") %></picture>
+    <%# end %>
+    <p><%= product.name %></p>
+    <p><%= product.description %></p>
+    <p>Colour: <%= product.colour %></p>
+    <p>Price: €<%= product.price %></p>
+    <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
